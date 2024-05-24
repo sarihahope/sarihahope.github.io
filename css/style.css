@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --font-family: "Lora", serif;
+  --primary-color: #7cae7a;
+  --secondary-color: #e09f7d;
+  --tertiary-color: #5e565a;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: black;
+}
+
+body {
+  font-family: var(--font-family);
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: auto;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 1em;
+}
+
+section {
+  padding: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
