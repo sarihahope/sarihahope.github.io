@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WDD 330 Final Project</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="./js/main.js" type="module"></script>
+
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
     <main>
-        <h1>Hello</h1>
-        <p>Welcome to the Bookstore</p>
-        <form id="book-form">
-            <input type="text" id="title" placeholder="Title" />
-            <input type="text" id="author" placeholder="Author" />
-            <input type="text" id="isbn" placeholder="ISBN" />
-            <button type="submit">Add Book</button>
+      <section class="intro">
+        <h2>Seach for a book Title</h2>
+        <form id="book">
+          <label>Book Title</label>
+          <input type="text" id="search" name="seach" placeholder="Seach for a Book Title" value="Harry Potter"/>
+          <button type="submit">Search</button>
         </form>
-            <div id="books-container"></div>
+      </section>
+      </div>
+        <div id="cards"></div>
     </main>
     <footer id="main-footer"></footer>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>
