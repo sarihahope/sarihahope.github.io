@@ -1,4 +1,10 @@
+const button = document.querySelector('#searchBtn');
 const cards = document.querySelector('#cards');
+const bookTitle = document.querySelector('.inputTitle');
+const bookAuthor = document.querySelector('.inputAuthor');
+document.getElementById("searchBtn").addEventListener('click', getApi);
+document.getElementById("searchBtn2").addEventListener('click', getApi);
+
 
 async function getApi () {
     const url = 'https://all-books-api.p.rapidapi.com/getBooks';
@@ -9,7 +15,6 @@ async function getApi () {
             'x-rapidapi-host': 'all-books-api.p.rapidapi.com'
         }
     };
-
     try {
 
         const response = await fetch(url, options);
@@ -31,28 +36,27 @@ async function getApi () {
         console.error(error);
     }
 }
-getApi();
 
-function saveData() {
-    const form = document.querySelector('#form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const input = document.querySelector('#input').value;
-        localStorage.setItem('input', input);
-    });
+function storeDataTitle() {
+    localStorage.setItem("bookTitle", bookTitle.value);
+
 }
-saveData();
 
-function getData() {
-    const input = localStorage.getItem('input');
-    getApi(input);
+function storeDataAuthor() {
+    localStorage.setItem("bookAuthor", bookAuthor.value);;
 }
-getData();
 
+document.getElementById("searchBtn").addEventListener('click', storeDataTitle);
+document.getElementById("searchBtn2").addEventListener('click', storeDataAuthor);
 
+getApi();   
 
+const data = {bookTitle: localStorage.getItem("bookTitle")};
+const data2 = {bookAuthor: localStorage.getItem("bookAuthor")};
 
+console.log(data);
+console.log(data2);
 
-
+localStorage.clear();
 
 
